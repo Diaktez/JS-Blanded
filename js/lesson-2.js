@@ -257,7 +257,38 @@ const fruits = [
 // console.log(calcTotalPrice(fruits, "Груша"));
 // console.log(calcTotalPrice(fruits, "Виноград"));
 // console.log(calcTotalPrice(fruits, "Банан"));
-for (const hole of fruits) {
-  const totalHole = hole.price * hole.quantity;
-  console.log(`${hole.name}: ${totalHole}`);
-}
+//============================================================
+// for (const hole of fruits) {
+//   const totalHole = hole.price * hole.quantity;
+//   console.log(`${hole.name}: ${totalHole}`);
+// }
+//============================================================
+
+// const holeCounter = {}; //Это пустой объект, в котором мы будем считать, сколько раз мы уже видели каждый фрукт. Например:
+// // fruitCounter["Банан"] = 1 — когда банан встретился в первый раз.
+// // fruitCounter["Банан"] = 2 — когда встретился снова.
+// for (const hole of fruits) {
+//   //Цикл перебирает каждый объект в массиве fruits.
+//   if (!holeCounter[hole.name]) {
+//     holeCounter[hole.name] = 1;
+//   } else {
+//     holeCounter[hole.name]++;
+//   }
+//   //Здесь мы проверяем:
+//   // Если такого фрукта ещё не было — записываем 1.
+//   // Если уже встречался — прибавляем к счётчику 1.
+//   //  Почему !holeCounter[hole.name]?
+//   // Потому что если такого ключа ещё нет — возвращается undefined, а !undefined = true.
+//   const totalHole = hole.price * hole.quantity; //Просто перемножаем цену и количество — это итоговая
+//   // стоимость одного конкретного фрукта (не всех с таким именем, а именно этого экземпляра).
+//   let lighToHole = 0;
+//   if (holeCounter[hole.name] > 1) {
+//     lighToHole = hole.name + " № " + holeCounter[hole.name];
+//   } else {
+//     lighToHole = hole.name;
+//   }
+//   // Тут мы решаем, как подписывать фрукт:
+//   // Если это первый раз — пишем просто "Банан".
+//   // Если это второй, третий и т.д. — добавляем #2, #3 и так далее.
+//   console.log(lighToHole + ": " + totalHole);
+// }
